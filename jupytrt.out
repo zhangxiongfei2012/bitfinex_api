@@ -1,0 +1,185 @@
+[I 22:28:35.942 NotebookApp] Serving notebooks from local directory: /mnt/work/bitfinex_api
+[I 22:28:35.943 NotebookApp] The Jupyter Notebook is running at:
+[I 22:28:35.943 NotebookApp] http://fqdata:8080/?token=8d9f78910def62005e5505d51ee4b1b69261bf346a0d891f
+[I 22:28:35.943 NotebookApp]  or http://127.0.0.1:8080/?token=8d9f78910def62005e5505d51ee4b1b69261bf346a0d891f
+[I 22:28:35.943 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 22:28:35.962 NotebookApp] No web browser found: could not locate runnable browser.
+[C 22:28:35.963 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/zhangxiongfei/.local/share/jupyter/runtime/nbserver-10679-open.html
+    Or copy and paste one of these URLs:
+        http://fqdata:8080/?token=8d9f78910def62005e5505d51ee4b1b69261bf346a0d891f
+     or http://127.0.0.1:8080/?token=8d9f78910def62005e5505d51ee4b1b69261bf346a0d891f
+[W 22:28:39.536 NotebookApp] 404 GET /api/contents/jupyter/test.ipynb?content=0&_=1564562768007 (27.186.194.220): No such file or directory: jupyter/test.ipynb
+[W 22:28:39.536 NotebookApp] No such file or directory: jupyter/test.ipynb
+[W 22:28:39.536 NotebookApp] 404 GET /api/contents/jupyter/test.ipynb?content=0&_=1564562768007 (27.186.194.220) 3.02ms referer=http://47.74.239.243/notebooks/jupyter/test.ipynb
+[I 22:28:40.106 NotebookApp] Uploading file to /jupyter/test.ipynb
+[I 22:28:48.866 NotebookApp] 302 GET / (27.186.194.220) 0.76ms
+[E 22:28:49.162 NotebookApp] Could not open static file ''
+[W 22:28:50.369 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 12.03ms referer=http://47.74.239.243/tree?
+[W 22:28:51.622 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.89ms referer=http://47.74.239.243/tree?
+[W 22:30:02.243 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.90ms referer=http://47.74.239.243/edit/example/collectData.py
+[W 22:30:02.462 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.94ms referer=http://47.74.239.243/edit/example/collectData.py
+[I 22:31:05.496 NotebookApp] Creating new file in /example
+[W 22:31:05.855 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.92ms referer=http://47.74.239.243/edit/example/untitled
+[W 22:31:05.989 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.30ms referer=http://47.74.239.243/edit/example/untitled
+[W 22:31:39.332 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.31ms referer=http://47.74.239.243/notebooks/jupyter/bitfinex_data.ipynb
+[W 22:31:39.613 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.66ms referer=http://47.74.239.243/notebooks/jupyter/bitfinex_data.ipynb
+[I 22:31:40.164 NotebookApp] Kernel started: 53d5bf45-e9bd-497b-b161-69eb62f7266c
+[I 22:31:40.576 NotebookApp] Adapting from protocol version 5.1 (kernel 53d5bf45-e9bd-497b-b161-69eb62f7266c) to 5.3 (client).
+[W 22:31:46.247 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.57ms referer=http://47.74.239.243/notebooks/jupyter/test.ipynb
+[W 22:31:46.430 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.38ms referer=http://47.74.239.243/notebooks/jupyter/test.ipynb
+[I 22:31:47.786 NotebookApp] Kernel started: 381dd71e-a6be-4cae-8c13-5686a1d33ac5
+[I 22:31:48.191 NotebookApp] Adapting from protocol version 5.1 (kernel 381dd71e-a6be-4cae-8c13-5686a1d33ac5) to 5.3 (client).
+[I 22:31:53.538 NotebookApp] Creating new notebook in /jupyter
+[W 22:31:53.898 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.84ms referer=http://47.74.239.243/notebooks/jupyter/Untitled.ipynb?kernel_name=python3
+[W 22:31:54.186 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.14ms referer=http://47.74.239.243/notebooks/jupyter/Untitled.ipynb?kernel_name=python3
+[I 22:31:54.547 NotebookApp] Kernel started: cb956364-c3c6-497c-a2b8-cde380b0b378
+[I 22:31:54.985 NotebookApp] Adapting from protocol version 5.1 (kernel cb956364-c3c6-497c-a2b8-cde380b0b378) to 5.3 (client).
+[I 22:33:55.418 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 22:35:54.641 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 22:37:55.433 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 22:51:54.770 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 22:53:54.649 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 22:55:54.646 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:17:54.759 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:21:54.665 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:23:00.628 NotebookApp] 302 GET / (52.28.167.232) 0.69ms
+[I 23:23:00.868 NotebookApp] 302 GET /tree? (52.28.167.232) 1.04ms
+[I 23:23:54.656 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:29:54.753 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:31:54.663 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:37:54.783 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:39:54.655 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:43:54.657 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:45:54.707 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 23:47:54.654 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 00:03:54.795 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 00:05:54.667 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 00:07:54.681 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 00:10:29.105 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 00:29:38.158 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[W 01:53:18.194 NotebookApp] WebSocket ping timeout after 119905 ms.
+[I 01:53:23.196 NotebookApp] Starting buffering for 381dd71e-a6be-4cae-8c13-5686a1d33ac5:920055ce70a9437ab8887d9ce874f9b8
+[W 01:53:24.988 NotebookApp] WebSocket ping timeout after 119907 ms.
+[I 01:53:29.989 NotebookApp] Starting buffering for cb956364-c3c6-497c-a2b8-cde380b0b378:d55f88025d4e48588f13bad450a9ca78
+[W 01:53:40.579 NotebookApp] WebSocket ping timeout after 119907 ms.
+[I 01:53:45.581 NotebookApp] Starting buffering for 53d5bf45-e9bd-497b-b161-69eb62f7266c:e5adec1baac644d29a5334b9bfea90fd
+[I 02:38:09.871 NotebookApp] 302 GET / (164.163.61.124) 0.54ms
+[I 03:26:07.784 NotebookApp] 302 GET / (185.23.193.136) 0.76ms
+[I 04:24:40.138 NotebookApp] 302 GET / (177.9.109.9) 0.67ms
+[I 04:24:40.177 NotebookApp] 302 GET / (177.9.109.9) 0.45ms
+[I 04:34:05.936 NotebookApp] 302 GET / (212.69.18.44) 0.69ms
+[I 04:44:27.992 NotebookApp] 302 GET / (188.127.224.218) 0.47ms
+[I 04:44:28.705 NotebookApp] 302 GET /tree (188.127.224.218) 0.77ms
+[I 04:44:30.504 NotebookApp] 302 GET /HNAP1/ (188.127.224.218) 0.52ms
+[W 04:44:31.215 NotebookApp] 404 GET /HNAP1 (188.127.224.218) 1.52ms referer=http://47.74.239.243/
+[I 06:01:15.657 NotebookApp] 302 GET / (103.59.156.16) 0.58ms
+[I 08:25:31.519 NotebookApp] 302 GET / (101.132.97.6) 0.78ms
+[I 08:25:31.593 NotebookApp] 302 GET /tree? (101.132.97.6) 0.67ms
+[I 08:46:38.529 NotebookApp] 302 GET / (178.165.117.12) 0.53ms
+[I 08:53:29.227 NotebookApp] 302 GET / (103.59.156.16) 0.76ms
+[I 09:21:55.347 NotebookApp] 302 GET / (177.86.125.10) 0.56ms
+[W 10:04:03.646 NotebookApp] 404 GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=busybox&curpath=/&currentsetting.htm=1 (5.64.191.19) 1.50ms referer=None
+[I 10:34:27.403 NotebookApp] Adapting from protocol version 5.1 (kernel 53d5bf45-e9bd-497b-b161-69eb62f7266c) to 5.3 (client).
+[I 10:34:27.404 NotebookApp] Restoring connection for 53d5bf45-e9bd-497b-b161-69eb62f7266c:e5adec1baac644d29a5334b9bfea90fd
+[I 10:34:28.798 NotebookApp] Adapting from protocol version 5.1 (kernel 381dd71e-a6be-4cae-8c13-5686a1d33ac5) to 5.3 (client).
+[I 10:34:28.798 NotebookApp] Restoring connection for 381dd71e-a6be-4cae-8c13-5686a1d33ac5:920055ce70a9437ab8887d9ce874f9b8
+[I 10:34:29.621 NotebookApp] Adapting from protocol version 5.1 (kernel cb956364-c3c6-497c-a2b8-cde380b0b378) to 5.3 (client).
+[I 10:34:29.621 NotebookApp] Restoring connection for cb956364-c3c6-497c-a2b8-cde380b0b378:d55f88025d4e48588f13bad450a9ca78
+[I 11:27:54.321 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 11:39:54.282 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 11:51:59.748 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 11:52:02.016 NotebookApp] Creating new notebook in /jupyter
+[W 11:52:02.748 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.95ms referer=http://47.74.239.243/notebooks/jupyter/Untitled1.ipynb?kernel_name=python3
+[W 11:52:03.475 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.68ms referer=http://47.74.239.243/notebooks/jupyter/Untitled1.ipynb?kernel_name=python3
+[I 11:52:04.232 NotebookApp] Kernel started: c1abccb1-de3c-4826-b133-904a00e6dba6
+[I 11:52:04.889 NotebookApp] Adapting from protocol version 5.1 (kernel c1abccb1-de3c-4826-b133-904a00e6dba6) to 5.3 (client).
+[W 11:52:14.542 NotebookApp] 409 PATCH /api/contents/jupyter/Untitled.ipynb (27.186.194.220): File already exists: jupyter/bitfinex_data.ipynb
+[W 11:52:14.542 NotebookApp] File already exists: jupyter/bitfinex_data.ipynb
+[W 11:52:14.543 NotebookApp] 409 PATCH /api/contents/jupyter/Untitled.ipynb (27.186.194.220) 1.48ms referer=http://47.74.239.243/notebooks/jupyter/Untitled.ipynb?kernel_name=python3
+[I 11:54:04.336 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 11:56:04.947 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 11:58:06.200 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:00:05.243 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:02:05.693 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:04:04.334 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:06:04.942 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:06:53.531 NotebookApp] Creating new notebook in /jupyter
+[W 12:06:54.120 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.67ms referer=http://47.74.239.243/notebooks/jupyter/Untitled.ipynb?kernel_name=python3
+[I 12:06:54.592 NotebookApp] Kernel started: 107278be-69bd-4521-8853-73804db6bd5e
+[I 12:06:55.265 NotebookApp] Adapting from protocol version 5.1 (kernel 107278be-69bd-4521-8853-73804db6bd5e) to 5.3 (client).
+[I 12:08:54.779 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 12:10:04.948 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:10:54.942 NotebookApp] Saving file at /jupyter/Untitled.ipynb
+[I 12:12:04.336 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:14:05.571 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:18:04.342 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:20:04.337 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:22:05.386 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:24:06.522 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[W 12:27:34.891 NotebookApp] WebSocket ping timeout after 119909 ms.
+[I 12:27:39.894 NotebookApp] Starting buffering for c1abccb1-de3c-4826-b133-904a00e6dba6:78ec592beaa24e50b94dea708f407869
+[I 12:27:54.611 NotebookApp] Starting buffering for 107278be-69bd-4521-8853-73804db6bd5e:94bb788300b646ed8ba24b9c597e57c4
+[I 12:27:54.614 NotebookApp] Starting buffering for 53d5bf45-e9bd-497b-b161-69eb62f7266c:e5adec1baac644d29a5334b9bfea90fd
+[I 12:27:54.615 NotebookApp] Starting buffering for cb956364-c3c6-497c-a2b8-cde380b0b378:d55f88025d4e48588f13bad450a9ca78
+[I 12:27:54.616 NotebookApp] Starting buffering for 381dd71e-a6be-4cae-8c13-5686a1d33ac5:920055ce70a9437ab8887d9ce874f9b8
+[I 12:27:54.788 NotebookApp] Adapting from protocol version 5.1 (kernel 381dd71e-a6be-4cae-8c13-5686a1d33ac5) to 5.3 (client).
+[I 12:27:54.788 NotebookApp] Restoring connection for 381dd71e-a6be-4cae-8c13-5686a1d33ac5:920055ce70a9437ab8887d9ce874f9b8
+[I 12:27:55.024 NotebookApp] Adapting from protocol version 5.1 (kernel cb956364-c3c6-497c-a2b8-cde380b0b378) to 5.3 (client).
+[I 12:27:55.025 NotebookApp] Restoring connection for cb956364-c3c6-497c-a2b8-cde380b0b378:d55f88025d4e48588f13bad450a9ca78
+[I 12:27:55.236 NotebookApp] Adapting from protocol version 5.1 (kernel 107278be-69bd-4521-8853-73804db6bd5e) to 5.3 (client).
+[I 12:27:55.237 NotebookApp] Restoring connection for 107278be-69bd-4521-8853-73804db6bd5e:94bb788300b646ed8ba24b9c597e57c4
+[I 12:27:55.437 NotebookApp] Adapting from protocol version 5.1 (kernel 53d5bf45-e9bd-497b-b161-69eb62f7266c) to 5.3 (client).
+[I 12:27:55.438 NotebookApp] Restoring connection for 53d5bf45-e9bd-497b-b161-69eb62f7266c:e5adec1baac644d29a5334b9bfea90fd
+[I 12:27:55.680 NotebookApp] Adapting from protocol version 5.1 (kernel c1abccb1-de3c-4826-b133-904a00e6dba6) to 5.3 (client).
+[I 12:27:55.681 NotebookApp] Restoring connection for c1abccb1-de3c-4826-b133-904a00e6dba6:78ec592beaa24e50b94dea708f407869
+[I 12:28:06.047 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:42:05.160 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:44:06.075 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 12:52:05.485 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:18:05.623 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:22:05.033 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:24:06.137 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:25:05.289 NotebookApp] Kernel interrupted: c1abccb1-de3c-4826-b133-904a00e6dba6
+[I 13:26:05.075 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:28:04.342 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:30:04.950 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:32:04.449 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:34:07.121 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:34:42.312 NotebookApp] Kernel interrupted: c1abccb1-de3c-4826-b133-904a00e6dba6
+[I 13:36:04.873 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:36:30.813 NotebookApp] Kernel interrupted: c1abccb1-de3c-4826-b133-904a00e6dba6
+[I 13:36:40.294 NotebookApp] Starting buffering for c1abccb1-de3c-4826-b133-904a00e6dba6:78ec592beaa24e50b94dea708f407869
+[I 13:36:40.708 NotebookApp] Kernel restarted: c1abccb1-de3c-4826-b133-904a00e6dba6
+[I 13:36:41.543 NotebookApp] Adapting from protocol version 5.1 (kernel c1abccb1-de3c-4826-b133-904a00e6dba6) to 5.3 (client).
+[I 13:36:41.544 NotebookApp] Restoring connection for c1abccb1-de3c-4826-b133-904a00e6dba6:78ec592beaa24e50b94dea708f407869
+[I 13:36:41.544 NotebookApp] Replaying 7 buffered messages
+[I 13:38:05.546 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 13:40:05.160 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:06:05.700 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:10:05.099 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:12:04.447 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:12:35.513 NotebookApp] 302 GET / (103.59.156.16) 0.89ms
+[I 14:14:04.988 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:16:04.491 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:18:04.453 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:20:04.448 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:22:04.963 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:24:04.970 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:26:04.472 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:28:04.457 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:30:04.462 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:34:04.426 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:36:04.464 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:38:05.067 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:40:05.087 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:42:04.581 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:44:04.659 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:46:05.150 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:48:04.564 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:50:04.493 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:52:04.457 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:56:04.462 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
+[I 14:58:04.498 NotebookApp] Saving file at /jupyter/Untitled1.ipynb
