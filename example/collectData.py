@@ -5,6 +5,10 @@ import datetime
 import time
 import os
 from datetime import timedelta
+import configparser
+import logging.config
+logging.config.fileConfig("logger.conf")
+logger = logging.getLogger("bitfinex")
 
 epoch = datetime.datetime.utcfromtimestamp(0)
 def unix_time_millis(dt):
@@ -16,15 +20,31 @@ def fetch_data(start=1364767200000, stop=1545346740000, symbol='btcusd', interva
     api_v2 = bitfinex.bitfinex_v2.api_v2()
     start = start - step
     data = []
+    number=0
     while start < stop:
         start = start + step
         end = start + step
-        res = api_v2.candles(symbol=symbol, interval=interval, limit=tick_limit, start=start, end=end)
-        data.extend(res)
-        print('Retrieving data from {} to {} for {}'.format(pd.to_datetime(start, unit='ms'),
+        data = api_v2.candles(symbol=symbol, interval=interval, limit=tick_limit, start=start, end=end)
+
+        logger.info('Retrieving data from {} to {} for {}'.format(pd.to_datetime(start, unit='ms'),
                                                             pd.to_datetime(end, unit='ms'), symbol))
-        print(len(data))
-        time.sleep(1.5)
+        if len(data):
+            logger.info("data is {}".format(data))
+            names = ['time', 'open', 'close', 'high', 'low', 'volume']
+            df = pd.DataFrame(data, columns=names)
+            df.drop_duplicates(inplace=True)
+            df['time'] = pd.to_datetime(df['time'], unit='ms')
+            df.set_index('time', inplace=True)
+            df.sort_index(inplace=True)
+            s=pd.to_datetime(start, unit='ms').strftime("%Y-%m-%d-%H-%M-%S")
+            e=pd.to_datetime(end, unit='ms').strftime("%Y-%m-%d-%H-%M-%S")
+            df.to_csv("/mnt/work/bitfinex_data/slices/{}###{}.csv".format(s,e))
+            number=number+1
+            logger.info("data length is {}".format(len(data)))
+            data=[]
+        else:
+            logger.info("data length is zero")
+        time.sleep(12)
     return data
 
 buffer=[]
@@ -92,6 +112,6 @@ for pair in pairs:
     path_new='{}/bitfinex_{}_{}_new.csv'.format(save_path, pair,bin_size)
     df.to_csv(path_original)
     print('calibrating data')
-    calibrate_data(start,stop,path_new,path_original)
+    #calibrate_data(start,stop,path_new,path_original)
 
 print('Done retrieving data')
