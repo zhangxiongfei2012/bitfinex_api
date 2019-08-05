@@ -18,32 +18,34 @@ def unix_time_millis(dt):
 def fetch_data(start=1364767200000, stop=1545346740000, symbol='btcusd', interval='1m', tick_limit=1000, step=60000000):
     # Create api instance
     api_v2 = bitfinex.bitfinex_v2.api_v2()
-    start = start - step
+    #start = start - step
     data = []
-    number=0
     while start < stop:
-        start = start + step
-        end = start + step
-        data = api_v2.candles(symbol=symbol, interval=interval, limit=tick_limit, start=start, end=end)
-
+        if start+step <= stop:
+            end= start+step
+        else:
+            end = stop
+        res = api_v2.candles(symbol=symbol, interval=interval, limit=tick_limit, start=start, end=end)
+        data.extend(res)
         logger.info('Retrieving data from {} to {} for {}'.format(pd.to_datetime(start, unit='ms'),
                                                             pd.to_datetime(end, unit='ms'), symbol))
         if len(data):
-            logger.info("data is {}".format(data))
-            names = ['time', 'open', 'close', 'high', 'low', 'volume']
-            df = pd.DataFrame(data, columns=names)
-            df.drop_duplicates(inplace=True)
-            df['time'] = pd.to_datetime(df['time'], unit='ms')
-            df.set_index('time', inplace=True)
-            df.sort_index(inplace=True)
-            s=pd.to_datetime(start, unit='ms').strftime("%Y-%m-%d-%H-%M-%S")
-            e=pd.to_datetime(end, unit='ms').strftime("%Y-%m-%d-%H-%M-%S")
-            df.to_csv("/mnt/work/bitfinex_data/slices/{}###{}.csv".format(s,e))
-            number=number+1
+            #logger.info("data is {}".format(data))
+            #names = ['time', 'open', 'close', 'high', 'low', 'volume']
+            #df = pd.DataFrame(data, columns=names)
+            #df.drop_duplicates(inplace=True)
+            #df['time'] = pd.to_datetime(df['time'], unit='ms')
+            #df.set_index('time', inplace=True)
+            #df.sort_index(inplace=True)
+            #s=pd.to_datetime(start, unit='ms').strftime("%Y-%m-%d-%H-%M-%S")
+            #e=pd.to_datetime(end, unit='ms').strftime("%Y-%m-%d-%H-%M-%S")
+            #df.to_csv("/mnt/work/bitfinex_data/slices/{}###{}.csv".format(s,e))
+            #number=number+1
             logger.info("data length is {}".format(len(data)))
-            data=[]
         else:
             logger.info("data length is zero")
+        start=start+step
+        logger.info("start is {}, stop is {}".format(start,stop))
         time.sleep(12)
     return data
 
@@ -81,13 +83,14 @@ bin_size = '5m'
 limit = 5000
 time_step = 1000*5*60*limit
 start=datetime.datetime(2016, 1, 1, 0, 0,0)
-stop=datetime.datetime(2019, 7, 1, 0, 0,0)
+stop=datetime.datetime(2019, 8, 1, 0, 0,0)
 t_start=unix_time_millis(start)
 t_stop=unix_time_millis(stop)
+logger.info("t_start:{}, t_stop:{} , time_step:{}".format(t_start,t_stop,time_step))
 #api_v1 = bitfinex.bitfinex_v1.api_v1()
 #pairs = api_v1.symbols()
 pairs=['btcusd']
-save_path = '/mnt/work/bitfinex_data/test'
+save_path = '/mnt/work/bitfinex_data'
 
 if os.path.exists(save_path) is False:
     os.mkdir(save_path)
@@ -112,6 +115,6 @@ for pair in pairs:
     path_new='{}/bitfinex_{}_{}_new.csv'.format(save_path, pair,bin_size)
     df.to_csv(path_original)
     print('calibrating data')
-    #calibrate_data(start,stop,path_new,path_original)
+    calibrate_data(start,stop,path_new,path_original)
 
 print('Done retrieving data')
