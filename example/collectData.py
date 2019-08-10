@@ -10,6 +10,8 @@ import logging.config
 logging.config.fileConfig("logger.conf")
 logger = logging.getLogger("bitfinex")
 
+
+candle=5
 epoch = datetime.datetime.utcfromtimestamp(0)
 def unix_time_millis(dt):
     return (dt - epoch).total_seconds() * 1000.0
@@ -55,17 +57,17 @@ def calibrate_data(start,stop,path_new,path_original):
     times=df["time"]
     df.set_index('time', inplace=True)
     df.sort_index(inplace=True)
-    step=timedelta(minutes=5)
+    step=timedelta(minutes=candle)
     time_format="%Y-%m-%d %H:%M:%S"
     names = ['time', 'open', 'close', 'high', 'low', 'volume']
     while start <= stop:
-        current=start.strftime(time_format)
+        current=(start+timedelta(minutes=candle)).strftime(time_format)
         if current not in df.index:
             print("current is {}".format(current))
-            prev=(start-timedelta(minutes=5)).strftime(time_format)
+            prev=(start-timedelta(minutes=candle)).strftime(time_format)
             new_row=df.loc[prev:prev].values.tolist()
             while len(new_row) == 0:
-                prev=(datetime.datetime.strptime(prev,time_format)-timedelta(minutes=5)).strftime(time_format)
+                prev=(datetime.datetime.strptime(prev,time_format)-timedelta(minutes=candle)).strftime(time_format)
                 new_row=df.loc[prev:prev].values.tolist()
                 print("prev is {}, new_row is {}".format(prev, new_row))
             new_row[0].insert( 0, current)
@@ -79,11 +81,12 @@ def calibrate_data(start,stop,path_new,path_original):
     df.sort_index(inplace=True)
     df.to_csv(path_new)
 # Define query parameters
-bin_size = '5m'
+bin_size = '{}m'.format(candle)
 limit = 5000
-time_step = 1000*5*60*limit
-start=datetime.datetime(2016, 1, 1, 0, 0,0)
-stop=datetime.datetime(2019, 8, 1, 0, 0,0)
+time_step = 1000*candle*60*limit
+#Bitfinex最早提供的数据是2013-04-01 00:05:00
+start=datetime.datetime(2013, 4, 1, 0, 0,0)
+stop=datetime.datetime(2019, 8, 6, 0, 0,0)
 t_start=unix_time_millis(start)
 t_stop=unix_time_millis(stop)
 logger.info("t_start:{}, t_stop:{} , time_step:{}".format(t_start,t_stop,time_step))
@@ -111,8 +114,8 @@ for pair in pairs:
     df.sort_index(inplace=True)
 
     print('Done downloading data. Saving to .csv.')
-    path_original='{}/bitfinex_{}_{}_original.csv'.format(save_path, pair,bin_size)
-    path_new='{}/bitfinex_{}_{}_new.csv'.format(save_path, pair,bin_size)
+    path_original='{}/bitfinex_{}_{}_original_2013.csv'.format(save_path, pair,bin_size)
+    path_new='{}/bitfinex_{}_{}_new_2013.csv'.format(save_path, pair,bin_size)
     df.to_csv(path_original)
     print('calibrating data')
     calibrate_data(start,stop,path_new,path_original)

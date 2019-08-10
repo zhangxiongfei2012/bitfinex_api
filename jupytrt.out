@@ -421,3 +421,35 @@
 [W 10:31:27.441 NotebookApp] 404 GET http://5.188.210.101/echo.php (5.188.210.101) 2.03ms referer=https://www.google.com/
 [I 11:00:53.866 NotebookApp] 302 GET / (103.59.156.16) 0.56ms
 [I 11:22:40.669 NotebookApp] 302 GET / (88.207.251.176) 0.53ms
+[I 12:00:38.796 NotebookApp] 302 GET / (178.73.215.171) 0.67ms
+[I 12:38:13.101 NotebookApp] 302 GET / (188.162.40.71) 0.47ms
+[I 12:38:38.125 NotebookApp] 302 GET /tree (188.162.40.71) 0.96ms
+[W 12:38:53.469 NotebookApp] 404 GET http://www.msftncsi.com/ncsi.txt (188.162.40.71) 1.50ms referer=http://47.74.239.243/
+[I 12:38:57.528 NotebookApp] 302 GET /HNAP1/ (188.162.40.71) 0.75ms
+[W 12:39:07.497 NotebookApp] 404 GET /HNAP1 (188.162.40.71) 1.38ms referer=http://47.74.239.243/
+[I 12:45:14.224 NotebookApp] 302 GET / (103.59.156.16) 0.64ms
+[W 14:23:45.850 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 3.15ms referer=http://47.74.239.243/tree/jupyter
+[W 14:23:46.202 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 2.10ms referer=http://47.74.239.243/tree/jupyter
+[W 14:23:49.705 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.78ms referer=http://47.74.239.243/notebooks/jupyter/test.ipynb
+[I 14:24:07.408 NotebookApp] Adapting from protocol version 5.1 (kernel 381dd71e-a6be-4cae-8c13-5686a1d33ac5) to 5.3 (client).
+[I 14:24:18.098 NotebookApp] Creating new notebook in /jupyter
+[W 14:24:18.451 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.86ms referer=http://47.74.239.243/notebooks/jupyter/Untitled2.ipynb?kernel_name=python3
+[W 14:24:18.559 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (27.186.194.220) 1.86ms referer=http://47.74.239.243/notebooks/jupyter/Untitled2.ipynb?kernel_name=python3
+[I 14:24:19.100 NotebookApp] Kernel started: 50e4b226-9bbb-4bd8-a8f2-06ab3ebd662d
+[I 14:24:19.637 NotebookApp] Adapting from protocol version 5.1 (kernel 50e4b226-9bbb-4bd8-a8f2-06ab3ebd662d) to 5.3 (client).
+[I 14:26:19.609 NotebookApp] Saving file at /jupyter/Untitled2.ipynb
+[I 14:28:19.203 NotebookApp] Saving file at /jupyter/Untitled2.ipynb
+[I 14:55:00.744 NotebookApp] 302 GET / (103.59.156.16) 0.81ms
+[I 15:04:42.240 NotebookApp] 302 GET / (139.162.106.181) 0.87ms
+[I 16:54:21.166 NotebookApp] Starting buffering for 50e4b226-9bbb-4bd8-a8f2-06ab3ebd662d:f6e54d2bf67c41f18128b5f33d09b975
+[I 17:25:57.441 NotebookApp] 302 GET / (103.59.156.16) 0.57ms
+[W 17:48:25.919 NotebookApp] 404 GET http://clientapi.ipip.net/echo.php?info=1234567890 (139.162.88.63) 2.33ms referer=None
+[I 19:02:47.662 NotebookApp] 302 GET / (187.140.179.205) 0.62ms
+[I 19:51:42.131 NotebookApp] 302 GET / (103.59.156.16) 0.55ms
+[I 21:10:07.430 NotebookApp] Saving file at /jupyter/test.ipynb
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
