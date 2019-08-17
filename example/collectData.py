@@ -64,29 +64,30 @@ def calibrate_data(start,stop,path_new,path_original):
         current=(start+timedelta(minutes=candle)).strftime(time_format)
         if current not in df.index:
             print("current is {}".format(current))
-            prev=(start-timedelta(minutes=candle)).strftime(time_format)
+            prev=(datetime.datetime.strptime(current,time_format)-timedelta(minutes=candle)).strftime(time_format)
             new_row=df.loc[prev:prev].values.tolist()
             while len(new_row) == 0:
                 prev=(datetime.datetime.strptime(prev,time_format)-timedelta(minutes=candle)).strftime(time_format)
                 new_row=df.loc[prev:prev].values.tolist()
                 print("prev is {}, new_row is {}".format(prev, new_row))
             new_row[0].insert( 0, current)
+            buffer=[]
             buffer.extend(new_row)
+            dfa=pd.DataFrame(buffer,columns=names)
+            dfa.set_index('time', inplace=True)
+            frames = [df, dfa]
+            df=pd.concat(frames)
+            df.sort_index(inplace=True)
+            buffer=[]
         start=start+step  
-    dfa=pd.DataFrame(buffer,columns=names)
-    dfa.set_index('time', inplace=True)
-    print("The length of missing data is {}".format(len(dfa.index)))
-    frames = [df, dfa]
-    df=pd.concat(frames)
-    df.sort_index(inplace=True)
     df.to_csv(path_new)
 # Define query parameters
 bin_size = '{}m'.format(candle)
 limit = 5000
 time_step = 1000*candle*60*limit
 #Bitfinex最早提供的数据是2013-04-01 00:05:00
-start=datetime.datetime(2016, 6, 1, 0, 0,0)
-stop=datetime.datetime(2019, 8, 15, 0, 0,0)
+start=datetime.datetime(2016, 8, 1, 0, 0,0)
+stop=datetime.datetime(2016, 8, 5, 0, 0,0)
 t_start=unix_time_millis(start)
 t_stop=unix_time_millis(stop)
 logger.info("t_start:{}, t_stop:{} , time_step:{}".format(t_start,t_stop,time_step))
