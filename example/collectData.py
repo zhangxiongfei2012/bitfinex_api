@@ -11,7 +11,7 @@ logging.config.fileConfig("logger.conf")
 logger = logging.getLogger("bitfinex")
 
 
-candle=5
+candle=1
 epoch = datetime.datetime.utcfromtimestamp(0)
 def unix_time_millis(dt):
     return (dt - epoch).total_seconds() * 1000.0
@@ -85,8 +85,8 @@ bin_size = '{}m'.format(candle)
 limit = 5000
 time_step = 1000*candle*60*limit
 #Bitfinex最早提供的数据是2013-04-01 00:05:00
-start=datetime.datetime(2013, 4, 1, 0, 0,0)
-stop=datetime.datetime(2019, 8, 6, 0, 0,0)
+start=datetime.datetime(2016, 6, 1, 0, 0,0)
+stop=datetime.datetime(2019, 8, 15, 0, 0,0)
 t_start=unix_time_millis(start)
 t_stop=unix_time_millis(stop)
 logger.info("t_start:{}, t_stop:{} , time_step:{}".format(t_start,t_stop,time_step))
@@ -114,8 +114,8 @@ for pair in pairs:
     df.sort_index(inplace=True)
 
     print('Done downloading data. Saving to .csv.')
-    path_original='{}/bitfinex_{}_{}_original_2013.csv'.format(save_path, pair,bin_size)
-    path_new='{}/bitfinex_{}_{}_new_2013.csv'.format(save_path, pair,bin_size)
+    path_original='{}/bitfinex_{}_{}_original.csv'.format(save_path, pair,bin_size)
+    path_new='{}/bitfinex_{}_{}_new.csv'.format(save_path, pair,bin_size)
     df.to_csv(path_original)
     print('calibrating data')
     calibrate_data(start,stop,path_new,path_original)
